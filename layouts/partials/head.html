@@ -6,4 +6,8 @@
 <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Params.description }}{{ end }}">
 {{- partialCached "head/css.html" . -}}
 {{- partialCached "head/favicon.html" . -}}
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script> 
 {{- /* template "_internal/google_analytics.html" . */ -}}
